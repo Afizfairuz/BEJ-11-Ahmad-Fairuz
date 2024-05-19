@@ -1,18 +1,15 @@
 const express = require("express");
 const router = express.Router();
 const {
-  
   GetEmployee,
   UpdateEmployee,
   CreateEmployee,
   DeleteEmployee,
-} = require("../handler/user.handler");
-
-
+} = require("../handler/order.handler");
 
 router.get("/emp/login", (req, res) => {
   res.render("login");
-}); 
+});
 
 router.get("/emp", GetEmployee);
 router.post("/emp", CreateEmployee);

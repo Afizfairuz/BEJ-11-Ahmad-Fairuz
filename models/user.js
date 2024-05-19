@@ -19,49 +19,23 @@ module.exports = (sequelize, DataTypes) => {
     type: DataTypes.STRING,
     allowNull: false,
     defaultValue: ''
-  },
-  address: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    defaultValue: ''
-  },
-  phone_number: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    defaultValue: ''
-  },
+  },  
   gender: {
     type: DataTypes.STRING,
     allowNull: false,
     defaultValue: ''
   },
-  password: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    defaultValue: ''
-  },
-  is_active: {
-    type: DataTypes.BOOLEAN,
-    allowNull: false,
-    defaultValue: false
-  },
-  createdat: {
+  
+  created_at: {
     type: DataTypes.DATEONLY,
     allowNull: false,
     defaultValue: false
   },
-  updateat: {
-    type: DataTypes.DATEONLY,
-    defaultValue: DataTypes.NOW
-  },
-  deletedat: {
-    type: DataTypes.DATEONLY,
-    
-  }
 
 }, {
   sequelize,
-  modelName: 'User' ,
+  modelName: 'user' ,
+  tableName: 'user'
 });
-return User ;
+return user ;
 };
